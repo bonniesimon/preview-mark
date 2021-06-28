@@ -1,4 +1,6 @@
-const Navbar = () => {
+import { FC } from "react"
+
+const Navbar:FC = () => {
 	return (
 		<header className="text-gray-100 body-font">
 			<div
@@ -9,7 +11,8 @@ const Navbar = () => {
 					href='/'
 				>
 					<img src="../assets/img/logo.png" alt="" className="w-8" />
-					<span className="ml-3 text-2xl">PreviewMark</span>
+					<span className="ml-3 text-2xl">Preview</span>
+					<span className="text-2xl text-green-300 bg-black px-1">Mark</span>
 				</a>
 				<nav
 					className="md:ml-auto flex flex-wrap items-center text-base justify-center"
