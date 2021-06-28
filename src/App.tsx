@@ -1,10 +1,12 @@
+// Core Libraries
 import React from 'react';
-import './App.css';
+// Components
+import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Preview-mark</h1> 
+    <div className="App min-h-screen bg-gray-700">
+      <Navbar/>
     </div>
   );
 }
