@@ -6,6 +6,7 @@ const Navbar = () => {
 			>
 				<a
 					className="flex title-font font-medium items-center text-gray-50 mb-4 md:mb-0"
+					href='/'
 				>
 					<img src="../assets/img/logo.png" alt="" className="w-8" />
 					<span className="ml-3 text-2xl">PreviewMark</span>
@@ -17,7 +18,7 @@ const Navbar = () => {
 						<li className="nav-item">
 							<a
 								className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75"
-								href="#"
+								href="/"
 							>
 								<i className="fab fa-facebook-square text-lg leading-lg opacity-75">
 								</i>
@@ -27,7 +28,7 @@ const Navbar = () => {
 						<li className="nav-item">
 							<a
 								className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75"
-								href="#"
+								href="/"
 							>
 								<i className="fab fa-twitter text-lg leading-lg opacity-75"> </i>
 								<span className="ml-2">Tweet</span>
@@ -37,7 +38,7 @@ const Navbar = () => {
 						<li className="nav-item">
 							<a
 								className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75"
-								href="#"
+								href="/"
 							>
 								<i className="fab fa-github text-lg leading-lg opacity-75"> </i>
 								<span className="ml-2">Pin</span>
