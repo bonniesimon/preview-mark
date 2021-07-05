@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactElement, ReactNode } from "react";
 import { FC, createContext, useState } from "react";
 
 type Props ={
@@ -7,10 +7,10 @@ type Props ={
 
 const markdownContext = createContext(null);
 
-const MarkdownProvider= ({children}:Props) => {
+const MarkdownProvider = ({children}: any): any => {
 	const [markdown,setMarkdown] = useState<string>('');
-	const setMarkdownHandle = () => {
-		
+		const setMarkdownHandle = (e : any) => {
+		setMarkdown(e.target.value);
 	}
 	return(
 		{children}
@@ -18,3 +18,4 @@ const MarkdownProvider= ({children}:Props) => {
 }
 
 export default MarkdownProvider;
+export {markdownContext};
