@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar';
 import Editor from '../components/Editor';
 import Preview from '../components/Preview';
 // Context
-import { markdownContext } from '../context/markdownContext';
+import { MarkdownContext } from '../context/markdownContext';
 import MarkdownProvider from '../context/markdownContext';
 
 
