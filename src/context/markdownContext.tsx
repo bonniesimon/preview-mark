@@ -26,11 +26,12 @@ const MarkdownProvider = ({children}: any): any => {
 	const setEditorMarkdownHandle = (e : any) => {
 		setEditorMarkdown(e.target.value);
 	}
-
+	
 	const [previewMarkdown, setPreviewMarkdown] = useState<string>('This is preview side');
-
+	
 	const setPreviewMarkdownHandle = (markdown: string) => {
-		setPreviewMarkdown(markdown);
+		let modifiedStringWithBrTag = markdown.replace(/\n/g, "<br>");
+		setPreviewMarkdown(modifiedStringWithBrTag);
 	}
 
 	return(

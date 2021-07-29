@@ -14,6 +14,9 @@ A markdown previewer build using react + typesript.
 	- The above blog is shit. I'm trying out a new on. I've written down in developement notes in logseq. Also this link [ContextApi with typescript](https://dev.to/alexander7161/react-context-api-with-typescript-example-j7a)
 - [ ] Try to figure out a way to pass all the data between Editor, button and Preview
 
+## Learnings
+
+- HTML converts multiple newline into a single whitespace. This doesn't allow use to use newline in textarea and use it for the preview since HTML converts the newlines into whitespace. [source](https://stackoverflow.com/questions/29574876/line-breaks-not-working-in-textarea-output)
 
 ## Tech Stack
 
