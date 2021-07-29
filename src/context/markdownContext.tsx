@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import marked from 'marked';
 
 type Props ={
 	children:React.ReactNode
@@ -30,8 +31,9 @@ const MarkdownProvider = ({children}: any): any => {
 	const [previewMarkdown, setPreviewMarkdown] = useState<string>('This is preview side');
 	
 	const setPreviewMarkdownHandle = (markdown: string) => {
-		let modifiedStringWithBrTag = markdown.replace(/\n/g, "<br>");
-		setPreviewMarkdown(modifiedStringWithBrTag);
+		// let modifiedStringWithBrTag = markdown.replace(/\n/g, "<br>");
+		let markdownConvertedString = marked(markdown);
+		setPreviewMarkdown(markdownConvertedString);
 	}
 
 	return(
