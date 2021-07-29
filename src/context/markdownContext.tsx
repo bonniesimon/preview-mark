@@ -14,7 +14,7 @@ interface IMarkdownContext {
 const MarkdownContextDefault: IMarkdownContext = {
 	editorMarkdown: "",
 	setEditorMarkdownHandle: () => {},
-	previewMarkdown: "",
+	previewMarkdown: "This is the preview side",
 	setPreviewEditor: () => {}
 }
 
@@ -27,7 +27,7 @@ const MarkdownProvider = ({children}: any): any => {
 		setEditorMarkdown(e.target.value);
 	}
 
-	const [previewMarkdown, setPreviewEditor] = useState<string>('');
+	const [previewMarkdown, setPreviewEditor] = useState<string>('This is preview side');
 
 	const setPreviewEditorHandle = (markdown: string) => {
 		setPreviewEditor(markdown);
