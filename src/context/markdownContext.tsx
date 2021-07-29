@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import marked from 'marked';
+import marked, { MarkedExtension } from 'marked';
 
 type Props ={
 	children:React.ReactNode
@@ -32,6 +32,34 @@ const MarkdownProvider = ({children}: any): any => {
 	
 	const setPreviewMarkdownHandle = (markdown: string) => {
 		// let modifiedStringWithBrTag = markdown.replace(/\n/g, "<br>");
+		const renderer:any= {
+			heading(text: string, level: number){
+				const escapedText = text.toLowerCase().replace(/[^\w]+/g, '-');
+				let headingSizeTailwind: string = 'base';
+				switch(level){
+					case 1:
+						headingSizeTailwind = '3xl'
+						break;
+					case 2:
+						headingSizeTailwind = '2xl';
+						break;
+					case 3:
+						headingSizeTailwind = 'xl';
+						break;
+					case 4:
+						headingSizeTailwind = 'lg';
+						break;
+					case 5:
+						headingSizeTailwind = 'base';
+						break;
+				}	
+				return `
+				<h${level} class="text-${headingSizeTailwind}">
+					${text}
+				</h${level}>`;
+			}
+		};
+		marked.use({renderer});
 		let markdownConvertedString = marked(markdown);
 		setPreviewMarkdown(markdownConvertedString);
 	}
