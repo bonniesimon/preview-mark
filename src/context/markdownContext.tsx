@@ -8,14 +8,14 @@ interface IMarkdownContext {
 	editorMarkdown: string;
 	setEditorMarkdownHandle: (e: any) => void;
 	previewMarkdown: string;
-	setPreviewEditor: (markdown: string) => void;
+	setPreviewMarkdownHandle: (markdown: string) => void;
 }
 
 const MarkdownContextDefault: IMarkdownContext = {
 	editorMarkdown: "",
 	setEditorMarkdownHandle: () => {},
 	previewMarkdown: "This is the preview side",
-	setPreviewEditor: () => {}
+	setPreviewMarkdownHandle: () => {}
 }
 
 const MarkdownContext = createContext<IMarkdownContext>(MarkdownContextDefault);
@@ -27,14 +27,14 @@ const MarkdownProvider = ({children}: any): any => {
 		setEditorMarkdown(e.target.value);
 	}
 
-	const [previewMarkdown, setPreviewEditor] = useState<string>('This is preview side');
+	const [previewMarkdown, setPreviewMarkdown] = useState<string>('This is preview side');
 
-	const setPreviewEditorHandle = (markdown: string) => {
-		setPreviewEditor(markdown);
+	const setPreviewMarkdownHandle = (markdown: string) => {
+		setPreviewMarkdown(markdown);
 	}
 
 	return(
-		<MarkdownContext.Provider value={{editorMarkdown,setEditorMarkdownHandle,previewMarkdown, setPreviewEditor}}>
+		<MarkdownContext.Provider value={{editorMarkdown,setEditorMarkdownHandle,previewMarkdown, setPreviewMarkdownHandle}}>
 			{children}
 		</MarkdownContext.Provider>
 	)
