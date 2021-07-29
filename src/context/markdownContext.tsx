@@ -5,26 +5,36 @@ type Props ={
 }
 
 interface IMarkdownContext {
-	markdown: string;
-	setMarkdownHandle: (e: any) => void;
+	editorMarkdown: string;
+	setEditorMarkdownHandle: (e: any) => void;
+	previewMarkdown: string;
+	setPreviewEditor: (markdown: string) => void;
 }
 
 const MarkdownContextDefault: IMarkdownContext = {
-	markdown: "",
-	setMarkdownHandle: () => {}
+	editorMarkdown: "",
+	setEditorMarkdownHandle: () => {},
+	previewMarkdown: "",
+	setPreviewEditor: () => {}
 }
 
 const MarkdownContext = createContext<IMarkdownContext>(MarkdownContextDefault);
 
 const MarkdownProvider = ({children}: any): any => {
-	const [markdown,setMarkdown] = useState<string>('');
+	const [editorMarkdown,setEditorMarkdown] = useState<string>('');
 
-	const setMarkdownHandle = (e : any) => {
-		setMarkdown(e.target.value);
+	const setEditorMarkdownHandle = (e : any) => {
+		setEditorMarkdown(e.target.value);
+	}
+
+	const [previewMarkdown, setPreviewEditor] = useState<string>('');
+
+	const setPreviewEditorHandle = (markdown: string) => {
+		setPreviewEditor(markdown);
 	}
 
 	return(
-		<MarkdownContext.Provider value={{markdown, setMarkdownHandle}}>
+		<MarkdownContext.Provider value={{editorMarkdown,setEditorMarkdownHandle,previewMarkdown, setPreviewEditor}}>
 			{children}
 		</MarkdownContext.Provider>
 	)
