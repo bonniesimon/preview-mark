@@ -14,7 +14,7 @@ const Main: FC = () => {
 	return (
 		<div>
 			<Navbar />
-			<div className="flex flex-col lg:flex-row items-stretch h-96 min-h-screen mx-20 mt-32">
+			<div className="flex flex-col lg:flex-row items-stretch min-h-screen mx-20 mt-32">
 				<MarkdownProvider>
 					<Editor />
 					<PreviewBtn/>	
