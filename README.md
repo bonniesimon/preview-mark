@@ -1,9 +1,8 @@
 
 # Preview-mark
 
-A markdown previewer build using react + typesript.
-
-
+A markdown previewer build using react + typesript.  
+**Work in progress��**
 ## Learnings
 
 - Configuring a React project using Typescript
