@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import Editor from '../components/Editor';
 import Preview from '../components/Preview';
 import PreviewBtn from '../components/PreviewBtn';
+import Footer from '../components/Footer';
 // Context
 import { MarkdownContext } from '../context/markdownContext';
 import MarkdownProvider from '../context/markdownContext';
@@ -21,6 +22,7 @@ const Main: FC = () => {
 					<Preview />
 				</MarkdownProvider>
 			</div>
+			<Footer/>
 		</div>
 	)
 }
