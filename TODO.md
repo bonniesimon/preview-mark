@@ -9,5 +9,6 @@
 - [x] Try to figure out a way to pass all the data between Editor, button and Preview
 - [x] UI bug: Editor and Preview going out of document when width of window decreased
 - [x] Add responsive styles for Editor and Preview
-- [ ] Add some breathing space at the end of the page
+- [x] Add some breathing space at the end of the page
+- [ ] Add responsive styles to navbar
 - [ ] Work on the Architecture for implementing the backend for publish feature.

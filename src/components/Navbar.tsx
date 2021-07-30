@@ -17,7 +17,7 @@ const Navbar:FC = () => {
 				<nav
 					className="md:ml-auto flex flex-wrap items-center text-base justify-center"
 				>
-					<ul className="flex flex-col lg:flex-row list-none ml-auto">
+					<ul className="flex flex-col md:flex-row list-none ml-auto">
 						<li className="nav-item">
 							<a
 								className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75"
