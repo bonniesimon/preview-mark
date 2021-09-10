@@ -36,7 +36,7 @@ const MarkdownProvider = ({children}: any): any => {
 			heading(text: string, level: number){
 				const escapedText = text.toLowerCase().replace(/[^\w]+/g, '-');
 				let headingSizeTailwind: string = 'base';
-				const hrTag: string = level == 1 ? '<hr class="p-3"/>' : '';
+				const hrTag: string = level === 1 ? '<hr class="p-3"/>' : '';
 				switch(level){
 					case 1:
 						headingSizeTailwind = '3xl py-2'
