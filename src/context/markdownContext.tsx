@@ -26,26 +26,39 @@ const MarkdownContext = createContext<IMarkdownContext>(MarkdownContextDefault);
 const MarkdownProvider = ({children}: any): any => {
 	const [editorMarkdown,setEditorMarkdown] = useState<string>('');
 	const [previewMarkdown, setPreviewMarkdown] = useState<string>('This is preview side');
+
 	useEffect(() => {
 		const editorMarkdownLocalStorage = localStorage.getItem('editorMarkdown');
 		if(editorMarkdownLocalStorage){
 			setEditorMarkdown(editorMarkdownLocalStorage);
 		}	
+
+		const previewMarkdownLocalStorage = localStorage.getItem('previewMarkdown');
+		if(previewMarkdownLocalStorage){
+			setPreviewMarkdown(previewMarkdownLocalStorage);
+		}
 	}, [])
 
+	/**
+	 * Controls what happens when value is entered into the Editor field 
+	 */
 	const setEditorMarkdownHandle = (e : any) => {
 		localStorage.setItem('editorMarkdown', e.target.value);
 		setEditorMarkdown(e.target.value);
 	}
 	
-	
+	/**
+	 * Controls what happens when the PreviewBtn is clicked.
+	 */	
 	const setPreviewMarkdownHandle = (markdown: string) => {
 		// let modifiedStringWithBrTag = markdown.replace(/\n/g, "<br>");
 
-		// Saving item to localStorage.
+		// Saving editorMarkdown to localStorage.
 		localStorage.setItem('editorMarkdown', markdown);
 		marked.use({renderer});
 		let markdownConvertedString = marked(markdown);
+		// Saving previewMarkdown to localStorage
+		localStorage.setItem('previewMarkdown', markdownConvertedString);
 		setPreviewMarkdown(markdownConvertedString);
 	}
 	
