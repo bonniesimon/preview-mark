@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 import marked, { MarkedExtension } from 'marked';
 // Helper Functions
 import {renderer} from './../utils/markedUtils';
@@ -26,6 +26,12 @@ const MarkdownContext = createContext<IMarkdownContext>(MarkdownContextDefault);
 const MarkdownProvider = ({children}: any): any => {
 	const [editorMarkdown,setEditorMarkdown] = useState<string>('');
 	const [previewMarkdown, setPreviewMarkdown] = useState<string>('This is preview side');
+	useEffect(() => {
+		const editorMarkdownLocalStorage = localStorage.getItem('editorMarkdown');
+		if(editorMarkdownLocalStorage){
+			setEditorMarkdown(editorMarkdownLocalStorage);
+		}	
+	}, [])
 
 	const setEditorMarkdownHandle = (e : any) => {
 		localStorage.setItem('editorMarkdown', e.target.value);
