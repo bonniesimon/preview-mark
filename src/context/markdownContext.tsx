@@ -23,12 +23,13 @@ const MarkdownContext = createContext<IMarkdownContext>(MarkdownContextDefault);
 
 const MarkdownProvider = ({children}: any): any => {
 	const [editorMarkdown,setEditorMarkdown] = useState<string>('');
+	const [previewMarkdown, setPreviewMarkdown] = useState<string>('This is preview side');
 
 	const setEditorMarkdownHandle = (e : any) => {
+		localStorage.setItem('editorMarkdown', e.target.value);
 		setEditorMarkdown(e.target.value);
 	}
 	
-	const [previewMarkdown, setPreviewMarkdown] = useState<string>('This is preview side');
 	
 	const setPreviewMarkdownHandle = (markdown: string) => {
 		// let modifiedStringWithBrTag = markdown.replace(/\n/g, "<br>");
@@ -41,40 +42,43 @@ const MarkdownProvider = ({children}: any): any => {
 					case 1:
 						headingSizeTailwind = '3xl py-2'
 						break;
-					case 2:
-						headingSizeTailwind = '2xl';
+						case 2:
+							headingSizeTailwind = '2xl';
+							break;
+							case 3:
+								headingSizeTailwind = 'xl';
 						break;
-					case 3:
-						headingSizeTailwind = 'xl';
-						break;
-					case 4:
-						headingSizeTailwind = 'lg';
-						break;
-					case 5:
-						headingSizeTailwind = 'base';
-						break;
-				}	
-				return `
+						case 4:
+							headingSizeTailwind = 'lg';
+							break;
+							case 5:
+								headingSizeTailwind = 'base';
+								break;
+							}	
+							return `
 					<h${level} class="text-${headingSizeTailwind}">
-						${text}
+					${text}
 					</h${level}>
 					${hrTag}
-				`;
-			},
+					`;
+				},
 			list(body: string, ordered: boolean){
 				const listStyleTypeTailwind: string = ordered? 'decimal': 'disc';
 				return `
-					<ul class="list-${listStyleTypeTailwind} px-4">
-						${body}
-					</ul>
+				<ul class="list-${listStyleTypeTailwind} px-4">
+				${body}
+				</ul>
 				`
 			}
 		};
+
+		// Saving item to localStorage.
+		localStorage.setItem('editorMarkdown', markdown);
 		marked.use({renderer});
 		let markdownConvertedString = marked(markdown);
 		setPreviewMarkdown(markdownConvertedString);
 	}
-
+	
 	return(
 		<MarkdownContext.Provider value={{editorMarkdown,setEditorMarkdownHandle,previewMarkdown, setPreviewMarkdownHandle}}>
 			{children}
