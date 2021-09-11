@@ -6,7 +6,7 @@ import { MarkdownContext } from "../context/markdownContext";
 const Preview: FC = () => {
 	const { previewMarkdown } = useContext(MarkdownContext);
 	return (
-		<div className="w-full min-h-screen mx-5">
+		<div className="self-center lg:w-full md:w-3/4 min-h-screen mx-5">
 			<h1 className="text-gray-300 text-center font-bold my-10">
 				Preview
 			</h1>
