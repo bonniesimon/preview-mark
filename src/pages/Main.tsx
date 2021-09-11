@@ -13,16 +13,12 @@ import MarkdownProvider from '../context/markdownContext';
 
 const Main: FC = () => {
 	return (
-		<div>
-			<Navbar />
-			<div className="flex flex-col lg:flex-row items-stretch mx-20 mt-32 pb-32">
-				<MarkdownProvider>
-					<Editor />
-					<PreviewBtn/>	
-					<Preview />
-				</MarkdownProvider>
-			</div>
-			<Footer/>
+		<div className="flex flex-col lg:flex-row items-stretch mx-20 mt-32 pb-32">
+			<MarkdownProvider>
+				<Editor />
+				<PreviewBtn />
+				<Preview />
+			</MarkdownProvider>
 		</div>
 	)
 }
