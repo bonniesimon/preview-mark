@@ -14,5 +14,6 @@
 - [x] Saving browser state using localStorage.
 - [x] Build and deploy the current version of the app.
 - [ ] Preview in full screen without Editor component.
+- [ ] Adjust height for the Preview component
 - [ ] Add responsive styles to navbar
 - [ ] Work on the Architecture for implementing the backend for publish feature.

@@ -1,6 +1,8 @@
 // Core Libraries
 import React, { FC } from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+// Context
+import MarkdownProvider from './context/markdownContext';
 // Components
 import Navbar from './components/Navbar';
 import Editor from './components/Editor';
@@ -15,8 +17,10 @@ const App:FC = () => {
 		<div className="App min-h-screen bg-gray-700">
 			<Navbar />
 			<Switch>
-				<Route path="/" exact component={Main} />
-				<Route path="/fullscreen-preview" exact component={PreviewFullScreen}/>
+				<MarkdownProvider>
+					<Route path="/" exact component={Main} />
+					<Route path="/fullscreen-preview" exact component={PreviewFullScreen}/>
+				</MarkdownProvider>
 			</Switch>
 			<Footer/>
 		</div>
