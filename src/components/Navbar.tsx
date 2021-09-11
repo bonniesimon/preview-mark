@@ -18,7 +18,7 @@ const Navbar:FC = () => {
 					className="md:ml-auto flex flex-wrap items-center text-base justify-center"
 				>
 					<ul className="flex flex-col md:flex-row list-none ml-auto">
-						<li className="nav-item">
+						{/* <li className="nav-item">
 							<a
 								className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75"
 								href="/"
@@ -27,7 +27,7 @@ const Navbar:FC = () => {
 								</i>
 								<span className="ml-2">Share</span>
 							</a>
-						</li>
+						</li> */}
 						<li className="nav-item">
 							<a
 								className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75"
@@ -44,7 +44,7 @@ const Navbar:FC = () => {
 								href="/"
 							>
 								<i className="fab fa-github text-lg leading-lg opacity-75"> </i>
-								<span className="ml-2">Pin</span>
+								<span className="ml-2">Star</span>
 							</a>
 						</li>
 					</ul>
