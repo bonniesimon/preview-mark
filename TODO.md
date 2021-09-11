@@ -12,7 +12,7 @@
 - [x] Add some breathing space at the end of the page
 - [x] Add a footer
 - [x] Saving browser state using localStorage.
-- [ ] Build and deploy the current version of the app.
+- [x] Build and deploy the current version of the app.
 - [ ] Preview in full screen without Editor component.
 - [ ] Add responsive styles to navbar
 - [ ] Work on the Architecture for implementing the backend for publish feature.
