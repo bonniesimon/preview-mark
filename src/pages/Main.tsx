@@ -12,7 +12,7 @@ import MarkdownProvider from '../context/markdownContext';
 
 const Main: FC = () => {
 	return (
-		<div className="flex flex-col lg:flex-row items-stretch mx-20 mt-32 pb-1">
+		<div className="flex flex-col lg:flex-row items-stretch md:mx-5 lg:mx-20 mt-32 pb-1">
 			<Editor />
 			<PreviewBtn />
 			<Preview />
