@@ -13,7 +13,7 @@ import PreviewFullScreen from './pages/PreviewFullScreen';
 
 const App:FC = () => {
   return (
-	<Router>
+	<Router basename={process.env.PUBLIC_URL}>
 		<div className="App min-h-screen bg-gray-700">
 			<Navbar />
 			<Switch>
