@@ -15,6 +15,6 @@
 - [x] Build and deploy the current version of the app.
 - [x] Preview in full screen without Editor component.
 - [x] Adjust height for the Preview component
-- [ ] Add proper links to github and twitter
+- [x] Add proper links to github and twitter
 - [ ] Add responsive styles to navbar
 - [ ] Work on the Architecture for implementing the backend for publish feature.
