@@ -1,4 +1,5 @@
 import { FC } from "react"
+import { Link } from "react-router-dom";
 
 const Navbar:FC = () => {
 	return (
@@ -6,14 +7,14 @@ const Navbar:FC = () => {
 			<div
 				className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
 			>
-				<a
+				<Link
 					className="flex title-font font-medium items-center text-gray-50 mb-4 md:mb-0"
-					href='/'
+					to='/'
 				>
 					<img src="../assets/img/logo.png" alt="" className="w-8" />
 					<span className="ml-3 text-2xl">Preview</span>
 					<span className="text-2xl text-green-300 bg-black px-1">Mark</span>
-				</a>
+				</Link>
 				<nav
 					className="md:ml-auto flex flex-wrap items-center text-base justify-center"
 				>
