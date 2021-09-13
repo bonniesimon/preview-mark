@@ -34,7 +34,7 @@ const Navbar:FC = () => {
 								href="/"
 							>
 								<i className="fab fa-twitter text-lg leading-lg opacity-75"> </i>
-								<span className="ml-2">Tweet</span>
+								<a href="https://ctt.ac/5vKHr" target="_blank" rel="noreferrer"><span className="ml-2">Tweet</span></a>
 							</a>
 						</li>
 
@@ -44,7 +44,7 @@ const Navbar:FC = () => {
 								href="/"
 							>
 								<i className="fab fa-github text-lg leading-lg opacity-75"> </i>
-								<span className="ml-2">Star</span>
+								<a href="https://github.com/bonniesimon/preview-mark" target="_blank" rel="noreferrer"><span className="ml-2">Star</span></a>
 							</a>
 						</li>
 					</ul>
