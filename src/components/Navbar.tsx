@@ -29,22 +29,20 @@ const Navbar:FC = () => {
 							</a>
 						</li> */}
 						<li className="nav-item">
-							<a
+							<a href="https://ctt.ac/5vKHr" target="_blank" rel="noreferrer"
 								className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75"
-								href="/"
 							>
 								<i className="fab fa-twitter text-lg leading-lg opacity-75"> </i>
-								<a href="https://ctt.ac/5vKHr" target="_blank" rel="noreferrer"><span className="ml-2">Tweet</span></a>
+								<span className="ml-2">Tweet</span>
 							</a>
 						</li>
 
 						<li className="nav-item">
-							<a
+							<a href="https://github.com/bonniesimon/preview-mark" target="_blank" rel="noreferrer"
 								className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75"
-								href="/"
 							>
 								<i className="fab fa-github text-lg leading-lg opacity-75"> </i>
-								<a href="https://github.com/bonniesimon/preview-mark" target="_blank" rel="noreferrer"><span className="ml-2">Star</span></a>
+								<span className="ml-2">Star</span>
 							</a>
 						</li>
 					</ul>
