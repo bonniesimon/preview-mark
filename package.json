@@ -1,7 +1,7 @@
 {
     "name": "previewmark-react-typescript",
     "version": "0.1.0",
-    "homepage": "https://previewmark.bonniesimon.tech",
+    "homepage": "https://bonniesimon.github.io/preview-mark",
     "private": true,
     "dependencies": {
         "@craco/craco": "^6.1.2",
