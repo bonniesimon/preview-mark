@@ -5,8 +5,6 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import MarkdownProvider from './context/markdownContext';
 // Components
 import Navbar from './components/Navbar';
-import Editor from './components/Editor';
-import Preview from './components/Preview';
 import Main from './pages/Main';
 import Footer from './components/Footer';
 import PreviewFullScreen from './pages/PreviewFullScreen';

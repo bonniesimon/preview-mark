@@ -1,13 +1,9 @@
-import React from 'react'
 import { FC } from 'react'
 // Components
-import Navbar from '../components/Navbar';
 import Editor from '../components/Editor';
 import Preview from '../components/Preview';
 import PreviewBtn from '../components/PreviewBtn';
-import Footer from '../components/Footer';
 // Context
-import MarkdownProvider from '../context/markdownContext';
 
 
 const Main: FC = () => {

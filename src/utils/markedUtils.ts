@@ -1,6 +1,6 @@
 const renderer:any= {
 	heading(text: string, level: number){
-		const escapedText = text.toLowerCase().replace(/[^\w]+/g, '-');
+		// const escapedText = text.toLowerCase().replace(/[^\w]+/g, '-');
 		let headingSizeTailwind: string = 'base';
 		const hrTag: string = level === 1 ? '<hr class="p-3"/>' : '';
 		switch(level){

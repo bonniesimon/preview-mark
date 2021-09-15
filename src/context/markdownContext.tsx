@@ -1,11 +1,9 @@
 import { createContext, useState, useEffect } from "react";
-import marked, { MarkedExtension } from 'marked';
+import marked from 'marked';
 // Helper Functions
 import {renderer} from './../utils/markedUtils';
 
-type Props ={
-	children:React.ReactNode
-}
+
 
 interface IMarkdownContext {
 	editorMarkdown: string;

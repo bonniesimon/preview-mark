@@ -1,8 +1,6 @@
 import { FC, useContext } from 'react';
 // Context
 import { MarkdownContext } from '../context/markdownContext';
-// Components
-import Preview from "../components/Preview"
 
 const PreviewFullScreen: FC = () => {
 	const {previewMarkdown} = useContext(MarkdownContext);
