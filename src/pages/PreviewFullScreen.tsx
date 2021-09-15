@@ -1,4 +1,6 @@
 import { FC, useContext } from 'react';
+// Components
+import PublishBtn from '../components/PublishBtn';
 // Context
 import { MarkdownContext } from '../context/markdownContext';
 
@@ -10,6 +12,9 @@ const PreviewFullScreen: FC = () => {
 				Preview
 			</h1>
 			<div className="bg-gray-600 min-h-screen p-5 text-gray-100" dangerouslySetInnerHTML={{ __html: previewMarkdown }}>
+			</div>
+			<div className="pt-5 flex flex-row justify-center">
+				<PublishBtn/>
 			</div>
 		</div>
 	)
