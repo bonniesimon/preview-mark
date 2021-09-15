@@ -16,5 +16,6 @@
 - [x] Preview in full screen without Editor component.
 - [x] Adjust height for the Preview component
 - [x] Add proper links to github and twitter
+- [x] Work on the Architecture for implementing the backend for publish feature.
 - [ ] Add responsive styles to navbar
-- [ ] Work on the Architecture for implementing the backend for publish feature.
+- [ ] Add tooltip to the Publish button
