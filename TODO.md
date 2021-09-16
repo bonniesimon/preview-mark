@@ -19,6 +19,8 @@
 - [x] Work on the Architecture for implementing the backend for publish feature.
 - [ ] Connect with backend
   - [x] Implement post request
-  - [ ] Implement the /pages/:id in react
+  - [x] Implement the /pages/:id in react
+  - [ ] Implement what to do if req fails
+  - [ ] save PublishedPage content to localhost
 - [ ] Add responsive styles to navbar
 - [ ] Add tooltip to the Publish button
