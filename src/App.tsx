@@ -8,6 +8,7 @@ import Navbar from './components/Navbar';
 import Main from './pages/Main';
 import Footer from './components/Footer';
 import PreviewFullScreen from './pages/PreviewFullScreen';
+import PublishedPage from './pages/PublishedPage';
 
 const App:FC = () => {
   return (
@@ -18,6 +19,7 @@ const App:FC = () => {
 				<MarkdownProvider>
 					<Route path="/" exact component={Main} />
 					<Route path="/fullscreen-preview" exact component={PreviewFullScreen}/>
+					<Route path="/pages/:id" component={PublishedPage}/>
 				</MarkdownProvider>
 			</Switch>
 			<Footer/>
