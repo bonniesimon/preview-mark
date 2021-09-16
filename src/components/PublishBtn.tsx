@@ -13,8 +13,8 @@ const PublishBtn = () => {
 	const {previewMarkdown} = useContext(MarkdownContext);
 
 	const postData = async (markdown: string, date: string) => {
-		const apiUrl:string = 'http://localhost:3001/publish-page';
-		// const apiUrl:string = 'https://f80l28.deta.dev';
+		// const apiUrl:string = 'http://localhost:3001/publish-page';
+		const apiUrl:string = 'https://f80l28.deta.dev/publish-page';
 		const reqBody = {
 			markdown,
 			date
@@ -28,14 +28,12 @@ const PublishBtn = () => {
 		}
 		const res = await fetch(apiUrl, apiOptions);
 		const json = await res.json();	
-		// console.log("json in postData", json);
 		return json;
 	}
 
 	const handlePublishClick = async () => {
 		const todayDate = new Date(Date.now()).toLocaleDateString();
 		const res = await postData(previewMarkdown, todayDate);
-		console.log("res in handlePublishClick", res);
 	}
 	return (
 		<button onClick={handlePublishClick} className="px-3 py-2 bg-yellow-400 text-black flex flex-row justify-center items-center">
