@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Redirect } from "react-router";
+import { Redirect, useHistory } from "react-router";
 import { MarkdownContext } from "../context/markdownContext";
 
 // interface IApiOptions{
@@ -12,6 +12,7 @@ import { MarkdownContext } from "../context/markdownContext";
 
 const PublishBtn = () => {
 	const {previewMarkdown} = useContext(MarkdownContext);
+	const history = useHistory();
 
 	const postData = async (markdown: string, date: string) => {
 		// const apiUrl:string = 'http://localhost:3001/publish-page';
@@ -35,8 +36,8 @@ const PublishBtn = () => {
 	const handlePublishClick = async () => {
 		const todayDate = new Date(Date.now()).toLocaleDateString();
 		const res = await postData(previewMarkdown, todayDate);
-		console.log(res.key);
-		// return <Redirect to="pages/:"/>
+		const redirectUrl: string = "/pages/" + res.key;
+		history.push(redirectUrl);
 	}
 	return (
 		<button onClick={handlePublishClick} className="px-3 py-2 bg-yellow-400 text-black flex flex-row justify-center items-center">
