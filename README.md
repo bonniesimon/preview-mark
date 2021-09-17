@@ -12,6 +12,7 @@ A markdown previewer build using react + typesript.
 - Adding custom renderer to *marked*. This was required since tailwind defaults all the heading tags. Used the [docs](https://marked.js.org/using_pro#use) of *marked*.
 - Using localStorage to persist browser state
 - Solved the gh-pages issue with react-router using [source](https://medium.com/@Dragonza/react-router-problem-with-gh-pages-c93a5e243819)
+- Learned about the usecase of HashRouter. And the incompetence of react to route and creating confusion between server side and client side routing.
 
 ## Tech Stack
 
