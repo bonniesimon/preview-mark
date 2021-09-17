@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/preview-mark/static/css/main.a7157f3a.chunk.css",
-    "main.js": "/preview-mark/static/js/main.c7a50927.chunk.js",
-    "main.js.map": "/preview-mark/static/js/main.c7a50927.chunk.js.map",
+    "main.css": "/preview-mark/static/css/main.245c9472.chunk.css",
+    "main.js": "/preview-mark/static/js/main.ab2ca8a7.chunk.js",
+    "main.js.map": "/preview-mark/static/js/main.ab2ca8a7.chunk.js.map",
     "runtime-main.js": "/preview-mark/static/js/runtime-main.b9b7e546.js",
     "runtime-main.js.map": "/preview-mark/static/js/runtime-main.b9b7e546.js.map",
     "static/js/2.6e170f13.chunk.js": "/preview-mark/static/js/2.6e170f13.chunk.js",
     "static/js/2.6e170f13.chunk.js.map": "/preview-mark/static/js/2.6e170f13.chunk.js.map",
     "index.html": "/preview-mark/index.html",
-    "static/css/main.a7157f3a.chunk.css.map": "/preview-mark/static/css/main.a7157f3a.chunk.css.map",
+    "static/css/main.245c9472.chunk.css.map": "/preview-mark/static/css/main.245c9472.chunk.css.map",
     "static/js/2.6e170f13.chunk.js.LICENSE.txt": "/preview-mark/static/js/2.6e170f13.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b9b7e546.js",
     "static/js/2.6e170f13.chunk.js",
-    "static/css/main.a7157f3a.chunk.css",
-    "static/js/main.c7a50927.chunk.js"
+    "static/css/main.245c9472.chunk.css",
+    "static/js/main.ab2ca8a7.chunk.js"
   ]
 }
