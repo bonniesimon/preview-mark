@@ -21,6 +21,7 @@
   - [x] Implement post request
   - [x] Implement the /pages/:id in react
   - [ ] Implement what to do if req fails
-  - [ ] save PublishedPage content to localhost
+  - [ ] save PublishedPage content to localStorage
+- [ ] Add styles to links in the previewed markdown
 - [ ] Add responsive styles to navbar
 - [ ] Add tooltip to the Publish button

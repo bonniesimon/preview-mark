@@ -12,7 +12,7 @@ import PublishedPage from './pages/PublishedPage';
 
 const App:FC = () => {
   return (
-	<HashRouter basename={process.env.PUBLIC_URL}>
+	<HashRouter /*basename={process.env.PUBLIC_URL}*/ hashType="noslash">
 		<div className="App min-h-screen bg-gray-700">
 			<Navbar />
 			<Switch>
