@@ -1,7 +1,7 @@
 
 # Preview-mark
 
-PreviewMark enables you to write, render, preview and share the markdown that you write. 
+PreviewMark enables you to write, render, preview and share the markdown that you write.   
 **Work in progress 👷**
 
 
