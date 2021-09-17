@@ -2,7 +2,7 @@
 # Preview-mark
 
 A markdown previewer build using react + typesript.  
-**Work in progress��**
+**Work in progress 👷**
 ## Learnings
 
 - Configuring a React project using Typescript
@@ -17,6 +17,7 @@ A markdown previewer build using react + typesript.
 ## Tech Stack
 
 **Client:** React+Typescript, TailwindCSS
+**API:** Deta Micro
 
 <!-- **Server:**  -->
 
