@@ -1,6 +1,6 @@
 // Core Libraries
 import React, { FC } from 'react';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, HashRouter, Route, Switch} from 'react-router-dom';
 // Context
 import MarkdownProvider from './context/markdownContext';
 // Components
@@ -12,7 +12,7 @@ import PublishedPage from './pages/PublishedPage';
 
 const App:FC = () => {
   return (
-	<Router basename={process.env.PUBLIC_URL}>
+	<HashRouter basename={process.env.PUBLIC_URL}>
 		<div className="App min-h-screen bg-gray-700">
 			<Navbar />
 			<Switch>
@@ -24,7 +24,7 @@ const App:FC = () => {
 			</Switch>
 			<Footer/>
 		</div>
-	</Router>
+	</HashRouter>
   );
 }
 
