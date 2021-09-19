@@ -22,6 +22,7 @@
   - [x] Implement the /pages/:id in react
   - [ ] Implement what to do if req fails
   - [ ] save PublishedPage content to localStorage
+- [ ] Check if a string is already present in the database and redirect to it rather than creating a new entry in the db.
 - [ ] Add styles to links in the previewed markdown
 - [ ] Add responsive styles to navbar
 - [ ] Add tooltip to the Publish button
