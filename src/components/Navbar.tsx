@@ -5,20 +5,20 @@ const Navbar:FC = () => {
 	return (
 		<header className="text-gray-100 body-font">
 			<div
-				className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
+				className="container mx-auto flex p-5 flex-row justify-between align-baseline"
 			>
 				<Link
 					className="flex title-font font-medium items-center text-gray-50 mb-4 md:mb-0"
 					to='/'
 				>
-					<img src="../assets/img/logo.png" alt="" className="w-8" />
+					{/* <img src="../assets/img/logo.png" alt="" className="w-8" /> */}
 					<span className="ml-3 text-2xl">Preview</span>
 					<span className="text-2xl text-green-300 bg-black px-1">Mark</span>
 				</Link>
 				<nav
 					className="md:ml-auto flex flex-wrap items-center text-base justify-center"
 				>
-					<ul className="flex flex-col md:flex-row list-none ml-auto">
+					<ul className="flex flex-row md:flex-row list-none ml-auto sm:flex-row">
 						{/* <li className="nav-item">
 							<a
 								className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75"
@@ -29,12 +29,12 @@ const Navbar:FC = () => {
 								<span className="ml-2">Share</span>
 							</a>
 						</li> */}
-						<li className="nav-item">
+						<li className="nav-item ">
 							<a href="https://ctt.ac/5vKHr" target="_blank" rel="noreferrer"
 								className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75"
 							>
 								<i className="fab fa-twitter text-lg leading-lg opacity-75"> </i>
-								<span className="ml-2">Tweet</span>
+								<span className="ml-2 hidden md:inline">Tweet</span>
 							</a>
 						</li>
 
@@ -43,7 +43,7 @@ const Navbar:FC = () => {
 								className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:opacity-75"
 							>
 								<i className="fab fa-github text-lg leading-lg opacity-75"> </i>
-								<span className="ml-2">Star</span>
+								<span className="ml-2 hidden md:inline">Star</span>
 							</a>
 						</li>
 					</ul>
